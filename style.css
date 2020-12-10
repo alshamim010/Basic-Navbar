@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Simple Navbar*/
+
+.mainmenu{
+    background-color: #9b59b6;
+}
+.mainmenu ul{
+    text-align: center;
+    
+}
+.mainmenu ul li{
+    display: inline-block;
+    margin-left: -5px;
+    
+}
+
+.mainmenu ul li a{
+    color: #fff;
+    padding: 15px 30px;
+    display: inline-block;
+    text-decoration: none;
+    border-right: 1px solid #8e44ad;
+} 
+.mainmenu ul li:first-child a{
+    border-left: 1px solid #8e44ad;
+}
+.mainmenu ul li:hover > a{
+    background-color:#8e44ad;
+    color: #ffc048;
+
+} 
+
+
+
+/* Drop Down Navbar part*/
+.mainmenu ul li{
+    position: relative;
+}
+
+.mainmenu ul li ul{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #9b59b6;
+    width: 300px;
+    border-top: 1px solid #8e44ad;
+    transition: .4s;
+}
+.mainmenu ul li ul li{
+    display: block;
+    margin-left: 0;
+}
+.mainmenu ul li ul li a{
+    display: block;
+    border: none;
+    border-bottom: 1px solid #8e44ad;
+}
+.mainmenu ul ul li:first-child a{
+    border-left: none;
+}
+
+/* Hover part*/
+.mainmenu ul li ul{
+   opacity: 0;
+   visibility: hidden;
+   transform: scaleY(0);
+   transform-origin: top center;
+}
+
+.mainmenu ul li:hover ul{
+    opacity: 1;
+   visibility: visible;
+   transform: scaleY(1);
+}
